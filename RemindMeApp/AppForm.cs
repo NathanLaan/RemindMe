@@ -12,6 +12,10 @@ namespace RemindMeApp
 {
   public partial class AppForm : Form
   {
+
+    private bool _applicationExit = false;
+    private AppOptions appOptions;
+
     public AppForm()
     {
       InitializeComponent();
@@ -26,6 +30,27 @@ namespace RemindMeApp
     private void AppForm_Load(object sender, EventArgs e)
     {
       this.cboNotifyInterval.SelectedIndex = 0;
+      // load settings
+      this.appOptions = new AppOptions();
+      this.LoadSettings();
+    }
+
+    private void LoadSettings()
+    {
+
+      #region Load NotificationMessage
+      string notificationMessage = this.appOptions.NotificationMessage;
+      if (string.IsNullOrEmpty(notificationMessage))
+      {
+        MessageBox.Show("null");
+        notificationMessage = "RemindMe Notification!";
+        this.appOptions.NotificationMessage = notificationMessage;
+      }
+      this.txtNotificationMessage.Text = notificationMessage;
+      #endregion
+
+
+
     }
 
     private void btnStart_Click(object sender, EventArgs e)
@@ -79,6 +104,40 @@ namespace RemindMeApp
       catch (Exception e)
       {
       }
+    }
+
+    private void mnuTrayExit_Click(object sender, EventArgs e)
+    {
+      this.ApplicationExit();
+    }
+
+    private void ApplicationExit()
+    {
+      this._applicationExit = true;
+      Application.Exit();
+    }
+
+    private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+    {
+      if (e.Button == System.Windows.Forms.MouseButtons.Left)
+      {
+        this.Visible = !this.Visible;
+      }
+    }
+
+    private void AppForm_FormClosing(object sender, FormClosingEventArgs e)
+    {
+      if (!this._applicationExit)
+      {
+        this.Visible = false;
+        e.Cancel = true;
+        this.ShowBalloonTip();
+      }
+    }
+
+    private void ShowBalloonTip()
+    {
+      this.notifyIcon.ShowBalloonTip(5000, "RemindMe", "RemindMe is still running. Double-click the icon to show or hide RemindMe. Right-click the icon for additional options.", ToolTipIcon.Info);
     }
 
 

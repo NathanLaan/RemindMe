@@ -7,9 +7,6 @@ namespace RemindMeApp
   class AppOptions
   {
 
-    public string NotificationMessage { get; set; }
-    public int NotificationInterval { get; set; }
-    public string NotificationIntervalUnit { get; set; }
 
     public sealed class Unit
     {
@@ -27,28 +24,67 @@ namespace RemindMeApp
     }
 
 
-    public void SaveSettings()
+    private static readonly string NotificationMessageKey = "NotificationMessage";
+    private static readonly string NotificationIntervalKey = "NotificationInterval";
+    private static readonly string NotificationIntervalUnitKey = "NotificationIntervalUnit";
+
+    public string NotificationMessage
     {
-      try
+      get
       {
-        Application.UserAppDataRegistry.SetValue("NotifyInterval", this.NotificationInterval);
+        try
+        {
+          return Application.UserAppDataRegistry.GetValue(AppOptions.NotificationMessageKey).ToString();
+        }
+        catch (Exception e)
+        {
+          return string.Empty;
+        }
       }
-      catch (Exception e)
+      set
       {
+        Application.UserAppDataRegistry.SetValue(AppOptions.NotificationMessageKey, value);
       }
     }
 
-    private void SaveNotificationMessage()
+    public int NotificationInterval
     {
+      get
+      {
+        try
+        {
+          return int.Parse(Application.UserAppDataRegistry.GetValue(AppOptions.NotificationIntervalKey).ToString());
+        }
+        catch (Exception e)
+        {
+          return 1;
+        }
+      }
+      set
+      {
+        Application.UserAppDataRegistry.SetValue(AppOptions.NotificationIntervalKey, value);
+      }
     }
 
-    private void SaveNotificationInterval()
+    public string NotificationIntervalUnit
     {
+      get
+      {
+        try
+        {
+          return Application.UserAppDataRegistry.GetValue(AppOptions.NotificationIntervalUnitKey).ToString();
+        }
+        catch (Exception e)
+        {
+          return string.Empty;
+        }
+      }
+      set
+      {
+        Application.UserAppDataRegistry.SetValue(AppOptions.NotificationIntervalUnitKey, value);
+      }
     }
 
-    private void SaveNotificationIntervalUnit()
-    {
-    }
 
   }
 
