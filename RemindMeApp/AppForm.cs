@@ -47,5 +47,28 @@ namespace RemindMeApp
       this.notifyTimer.Interval = Int32.Parse(this.txtNotifyInterval.Text) * 60 * 1000;
       this.notifyTimer.Start();
     }
+
+    private void txtNotificationMessage_TextChanged(object sender, EventArgs e)
+    {
+      //
+      // TODO: Save settings on edit...
+      //
+    }
+
+    private void txtNotifyInterval_TextChanged(object sender, EventArgs e)
+    {
+      //
+      // TODO: Save settings on edit...
+      //
+    }
+
+    private void cboNotifyInterval_SelectedIndexChanged(object sender, EventArgs e)
+    {
+      //
+      // TODO: Save settings on edit...
+      //
+    }
+
   }
+
 }

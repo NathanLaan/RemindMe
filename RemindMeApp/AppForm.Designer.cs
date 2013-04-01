@@ -64,6 +64,7 @@
       this.txtNotifyInterval.Size = new System.Drawing.Size(183, 20);
       this.txtNotifyInterval.TabIndex = 0;
       this.txtNotifyInterval.Text = "15";
+      this.txtNotifyInterval.TextChanged += new System.EventHandler(this.txtNotifyInterval_TextChanged);
       // 
       // lblTime
       // 
@@ -87,6 +88,7 @@
       this.cboNotifyInterval.Name = "cboNotifyInterval";
       this.cboNotifyInterval.Size = new System.Drawing.Size(93, 21);
       this.cboNotifyInterval.TabIndex = 2;
+      this.cboNotifyInterval.SelectedIndexChanged += new System.EventHandler(this.cboNotifyInterval_SelectedIndexChanged);
       // 
       // btnStart
       // 
@@ -122,6 +124,7 @@
       this.txtNotificationMessage.Size = new System.Drawing.Size(277, 74);
       this.txtNotificationMessage.TabIndex = 0;
       this.txtNotificationMessage.Text = "RemindMe Notification!";
+      this.txtNotificationMessage.TextChanged += new System.EventHandler(this.txtNotificationMessage_TextChanged);
       // 
       // lblNotificationMessage
       // 
