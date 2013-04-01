@@ -19,7 +19,8 @@ namespace RemindMeApp
 
     private void notifyTimer_Tick(object sender, EventArgs e)
     {
-      notifyIcon.ShowBalloonTip(10000, "RemindMe", "RemindMe Notification Message", ToolTipIcon.Info);
+      string message = string.IsNullOrEmpty(this.txtNotificationMessage.Text) ? "RemindMe Notification!" : this.txtNotificationMessage.Text;
+      notifyIcon.ShowBalloonTip(10000, "RemindMe", message, ToolTipIcon.Info);
     }
 
     private void AppForm_Load(object sender, EventArgs e)
