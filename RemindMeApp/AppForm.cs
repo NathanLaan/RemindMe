@@ -69,6 +69,19 @@ namespace RemindMeApp
       //
     }
 
+
+    private void SaveSettings()
+    {
+      try
+      {
+        Application.UserAppDataRegistry.SetValue("NotifyInterval", int.Parse(this.txtNotifyInterval.Text));
+      }
+      catch (Exception e)
+      {
+      }
+    }
+
+
   }
 
 }
