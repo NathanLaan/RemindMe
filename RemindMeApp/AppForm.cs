@@ -77,6 +77,16 @@ namespace RemindMeApp
 
     }
 
+    private void mnuTrayStart_Click(object sender, EventArgs e)
+    {
+      this.notifyTimer.Start();
+    }
+
+    private void mnuTrayStop_Click(object sender, EventArgs e)
+    {
+      this.notifyTimer.Stop();
+    }
+
     private void btnStart_Click(object sender, EventArgs e)
     {
       //
@@ -119,17 +129,6 @@ namespace RemindMeApp
       //
     }
 
-
-    private void SaveSettings()
-    {
-      try
-      {
-        Application.UserAppDataRegistry.SetValue("NotifyInterval", int.Parse(this.txtNotifyInterval.Text));
-      }
-      catch (Exception e)
-      {
-      }
-    }
 
     private void mnuTrayExit_Click(object sender, EventArgs e)
     {
