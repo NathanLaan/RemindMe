@@ -140,6 +140,7 @@ namespace RemindMeApp
     {
       this._applicationExit = true;
       Application.Exit();
+      this.tmrAnimIcon.Enabled = true;
     }
 
     private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -168,6 +169,43 @@ namespace RemindMeApp
     private void btnTestNotification_Click(object sender, EventArgs e)
     {
         this.ShowToast();
+    }
+
+    private bool _animationEnabled = true;
+    private int _frameCounter = 1;
+
+
+    private void tmrAnimIcon_Tick(object sender, EventArgs e)
+    {
+      #region ANIMATION
+      if (this._animationEnabled)
+      {
+        switch (this._frameCounter)
+        {
+          case 1:
+            this.notifyIcon.Icon = NotifyIconList.AppIcon00;
+            break;
+          case 2:
+            this.notifyIcon.Icon = NotifyIconList.AppIcon01;
+            break;
+        }
+        if (_frameCounter < 4)
+        {
+          _frameCounter++;
+        }
+        else
+        {
+          _frameCounter = 1;
+        }
+      }
+      else
+      {
+        // Set icon in case someone switches the property in the middle of an animation 
+        // sequence. There are more efficient ways to do this but this is a simple way.
+        this.notifyIcon.Icon = NotifyIconList.AppIcon00;
+      }
+      #endregion ANIMATION
+
     }
 
 

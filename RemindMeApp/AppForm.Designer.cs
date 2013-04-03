@@ -44,6 +44,9 @@
       this.lblNotificationMessage = new System.Windows.Forms.Label();
       this.txtNotificationMessage = new System.Windows.Forms.TextBox();
       this.btnTestNotification = new System.Windows.Forms.Button();
+      this.notifyIconImageList = new System.Windows.Forms.ImageList(this.components);
+      this.button1 = new System.Windows.Forms.Button();
+      this.tmrAnimIcon = new System.Windows.Forms.Timer(this.components);
       this.mnuTray.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -75,26 +78,26 @@
       // mnuTrayStart
       // 
       this.mnuTrayStart.Name = "mnuTrayStart";
-      this.mnuTrayStart.Size = new System.Drawing.Size(152, 22);
+      this.mnuTrayStart.Size = new System.Drawing.Size(98, 22);
       this.mnuTrayStart.Text = "&Start";
       this.mnuTrayStart.Click += new System.EventHandler(this.mnuTrayStart_Click);
       // 
       // mnuTrayStop
       // 
       this.mnuTrayStop.Name = "mnuTrayStop";
-      this.mnuTrayStop.Size = new System.Drawing.Size(152, 22);
+      this.mnuTrayStop.Size = new System.Drawing.Size(98, 22);
       this.mnuTrayStop.Text = "S&top";
       this.mnuTrayStop.Click += new System.EventHandler(this.mnuTrayStop_Click);
       // 
       // mnuTraySeparator01
       // 
       this.mnuTraySeparator01.Name = "mnuTraySeparator01";
-      this.mnuTraySeparator01.Size = new System.Drawing.Size(149, 6);
+      this.mnuTraySeparator01.Size = new System.Drawing.Size(95, 6);
       // 
       // mnuTrayExit
       // 
       this.mnuTrayExit.Name = "mnuTrayExit";
-      this.mnuTrayExit.Size = new System.Drawing.Size(152, 22);
+      this.mnuTrayExit.Size = new System.Drawing.Size(98, 22);
       this.mnuTrayExit.Text = "&Exit";
       this.mnuTrayExit.Click += new System.EventHandler(this.mnuTrayExit_Click);
       // 
@@ -104,7 +107,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
       this.txtNotifyInterval.Location = new System.Drawing.Point(109, 12);
       this.txtNotifyInterval.Name = "txtNotifyInterval";
-      this.txtNotifyInterval.Size = new System.Drawing.Size(183, 20);
+      this.txtNotifyInterval.Size = new System.Drawing.Size(196, 20);
       this.txtNotifyInterval.TabIndex = 0;
       this.txtNotifyInterval.Text = "15";
       this.txtNotifyInterval.TextChanged += new System.EventHandler(this.txtNotifyInterval_TextChanged);
@@ -127,7 +130,7 @@
       this.cboNotifyInterval.Items.AddRange(new object[] {
             "Minutes",
             "Hours"});
-      this.cboNotifyInterval.Location = new System.Drawing.Point(299, 12);
+      this.cboNotifyInterval.Location = new System.Drawing.Point(312, 12);
       this.cboNotifyInterval.Name = "cboNotifyInterval";
       this.cboNotifyInterval.Size = new System.Drawing.Size(93, 21);
       this.cboNotifyInterval.TabIndex = 2;
@@ -136,7 +139,7 @@
       // btnStart
       // 
       this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnStart.Location = new System.Drawing.Point(299, 146);
+      this.btnStart.Location = new System.Drawing.Point(312, 146);
       this.btnStart.Name = "btnStart";
       this.btnStart.Size = new System.Drawing.Size(93, 23);
       this.btnStart.TabIndex = 3;
@@ -161,7 +164,7 @@
       this.txtNotificationMessage.Location = new System.Drawing.Point(109, 39);
       this.txtNotificationMessage.Multiline = true;
       this.txtNotificationMessage.Name = "txtNotificationMessage";
-      this.txtNotificationMessage.Size = new System.Drawing.Size(283, 101);
+      this.txtNotificationMessage.Size = new System.Drawing.Size(296, 101);
       this.txtNotificationMessage.TabIndex = 4;
       this.txtNotificationMessage.Text = "RemindMe Notification!";
       this.txtNotificationMessage.TextChanged += new System.EventHandler(this.txtNotificationMessage_TextChanged);
@@ -169,7 +172,7 @@
       // btnTestNotification
       // 
       this.btnTestNotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnTestNotification.Location = new System.Drawing.Point(199, 146);
+      this.btnTestNotification.Location = new System.Drawing.Point(109, 146);
       this.btnTestNotification.Name = "btnTestNotification";
       this.btnTestNotification.Size = new System.Drawing.Size(93, 23);
       this.btnTestNotification.TabIndex = 6;
@@ -177,11 +180,34 @@
       this.btnTestNotification.UseVisualStyleBackColor = true;
       this.btnTestNotification.Click += new System.EventHandler(this.btnTestNotification_Click);
       // 
+      // notifyIconImageList
+      // 
+      this.notifyIconImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("notifyIconImageList.ImageStream")));
+      this.notifyIconImageList.TransparentColor = System.Drawing.Color.Transparent;
+      this.notifyIconImageList.Images.SetKeyName(0, "AppIcon00.ico");
+      this.notifyIconImageList.Images.SetKeyName(1, "AppIcon01.ico");
+      // 
+      // button1
+      // 
+      this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+      this.button1.Location = new System.Drawing.Point(212, 146);
+      this.button1.Name = "button1";
+      this.button1.Size = new System.Drawing.Size(93, 23);
+      this.button1.TabIndex = 7;
+      this.button1.Text = "Start";
+      this.button1.UseVisualStyleBackColor = true;
+      // 
+      // tmrAnimIcon
+      // 
+      this.tmrAnimIcon.Interval = 200;
+      this.tmrAnimIcon.Tick += new System.EventHandler(this.tmrAnimIcon_Tick);
+      // 
       // AppForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(404, 193);
+      this.ClientSize = new System.Drawing.Size(417, 193);
+      this.Controls.Add(this.button1);
       this.Controls.Add(this.btnTestNotification);
       this.Controls.Add(this.lblNotificationMessage);
       this.Controls.Add(this.txtNotificationMessage);
@@ -220,6 +246,9 @@
     private System.Windows.Forms.ToolStripSeparator mnuTraySeparator01;
     private System.Windows.Forms.ToolStripMenuItem mnuTrayExit;
     private System.Windows.Forms.Button btnTestNotification;
+    private System.Windows.Forms.ImageList notifyIconImageList;
+    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Timer tmrAnimIcon;
   }
 }
 
