@@ -25,6 +25,39 @@ namespace RemindMeApp
         public ToastForm()
         {
             InitializeComponent();
+            this.tmrAnimation.Start();
+        }
+
+        private Boolean up = true;
+
+        private double amount = 0.05;
+
+        private void tmrAnimation_Tick(object sender, EventArgs e)
+        {
+          if (up)
+          {
+            if (this.Opacity >= 0.9)
+            {
+              this.up = false;
+              this.Opacity -= amount;
+            }
+            else
+            {
+              this.Opacity += amount;
+            }
+          }
+          else
+          {
+            if (this.Opacity <= 0.2)
+            {
+              this.up = true;
+              this.Opacity += amount;
+            }
+            else
+            {
+              this.Opacity -= amount;
+            }
+          }
         }
     }
 }

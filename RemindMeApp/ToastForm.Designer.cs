@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+      this.components = new System.ComponentModel.Container();
       System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToastForm));
       this.txtMessage = new System.Windows.Forms.TextBox();
+      this.tmrAnimation = new System.Windows.Forms.Timer(this.components);
       this.SuspendLayout();
       // 
       // txtMessage
@@ -43,6 +45,11 @@
       this.txtMessage.Size = new System.Drawing.Size(167, 68);
       this.txtMessage.TabIndex = 0;
       this.txtMessage.TabStop = false;
+      // 
+      // tmrAnimation
+      // 
+      this.tmrAnimation.Interval = 50;
+      this.tmrAnimation.Tick += new System.EventHandler(this.tmrAnimation_Tick);
       // 
       // ToastForm
       // 
@@ -66,5 +73,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.Timer tmrAnimation;
     }
 }
