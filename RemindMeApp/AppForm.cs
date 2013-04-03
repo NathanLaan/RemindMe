@@ -23,6 +23,27 @@ namespace RemindMeApp
     {
       string message = string.IsNullOrEmpty(this.txtNotificationMessage.Text) ? "RemindMe Notification!" : this.txtNotificationMessage.Text;
       notifyIcon.ShowBalloonTip(10000, "RemindMe", message, ToolTipIcon.Info);
+
+      this.ShowToast();
+    }
+
+    private void ShowToast()
+    {
+      //
+      // Size of desktop exluding the taskbar:
+      //
+      int w = SystemInformation.PrimaryMonitorMaximizedWindowSize.Width;
+      int h = SystemInformation.PrimaryMonitorMaximizedWindowSize.Height;
+
+      MessageBox.Show(string.Format("w: {0} --- h: {1}", w, h));
+
+      int spacer = 16;
+
+      ToastForm toastForm = new ToastForm();
+      toastForm.Left = w - toastForm.Width - spacer;
+      toastForm.Top = h - toastForm.Height - spacer;
+
+      toastForm.ShowDialog(this);
     }
 
     private void AppForm_Load(object sender, EventArgs e)
