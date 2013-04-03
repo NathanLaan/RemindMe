@@ -35,7 +35,7 @@ namespace RemindMeApp
       int w = SystemInformation.PrimaryMonitorMaximizedWindowSize.Width;
       int h = SystemInformation.PrimaryMonitorMaximizedWindowSize.Height;
 
-      MessageBox.Show(string.Format("w: {0} --- h: {1}", w, h));
+      //MessageBox.Show(string.Format("w: {0} --- h: {1}", w, h));
 
       int spacer = 16;
 
