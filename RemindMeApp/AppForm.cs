@@ -42,12 +42,13 @@ namespace RemindMeApp
 
       //MessageBox.Show(string.Format("w: {0} --- h: {1}", w, h));
 
-      int spacer = 16;
+      int spacer = 10;
 
       ToastForm toastForm = new ToastForm();
       toastForm.Left = w - toastForm.Width - spacer;
       toastForm.Top = h - toastForm.Height - spacer;
       toastForm.Message = this.appOptions.NotificationMessage;
+      toastForm.TopMost = true;
       toastForm.ShowDialog(this);
     }
 

@@ -36,7 +36,7 @@ namespace RemindMeApp
         {
           if (up)
           {
-            if (this.Opacity >= 0.9)
+            if (this.Opacity >= 0.95)
             {
               this.up = false;
               this.Opacity -= amount;
@@ -48,7 +48,7 @@ namespace RemindMeApp
           }
           else
           {
-            if (this.Opacity <= 0.2)
+            if (this.Opacity <= 0.6)
             {
               this.up = true;
               this.Opacity += amount;

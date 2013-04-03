@@ -36,26 +36,30 @@
       // 
       // txtMessage
       // 
+      this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.txtMessage.BackColor = System.Drawing.SystemColors.ControlLightLight;
       this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-      this.txtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.txtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtMessage.Location = new System.Drawing.Point(13, 13);
       this.txtMessage.Multiline = true;
       this.txtMessage.Name = "txtMessage";
       this.txtMessage.ReadOnly = true;
-      this.txtMessage.Size = new System.Drawing.Size(167, 68);
+      this.txtMessage.Size = new System.Drawing.Size(189, 100);
       this.txtMessage.TabIndex = 0;
       this.txtMessage.TabStop = false;
       // 
       // tmrAnimation
       // 
-      this.tmrAnimation.Interval = 50;
       this.tmrAnimation.Tick += new System.EventHandler(this.tmrAnimation_Tick);
       // 
       // ToastForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(192, 93);
+      this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+      this.ClientSize = new System.Drawing.Size(214, 125);
       this.Controls.Add(this.txtMessage);
       this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
