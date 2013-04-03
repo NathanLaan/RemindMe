@@ -28,25 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToastForm));
-            this.SuspendLayout();
-            // 
-            // ToastForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(192, 73);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "ToastForm";
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "RemindMe!";
-            this.ResumeLayout(false);
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ToastForm));
+      this.txtMessage = new System.Windows.Forms.TextBox();
+      this.SuspendLayout();
+      // 
+      // txtMessage
+      // 
+      this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+      this.txtMessage.Location = new System.Drawing.Point(13, 13);
+      this.txtMessage.Multiline = true;
+      this.txtMessage.Name = "txtMessage";
+      this.txtMessage.ReadOnly = true;
+      this.txtMessage.Size = new System.Drawing.Size(167, 68);
+      this.txtMessage.TabIndex = 0;
+      // 
+      // ToastForm
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+      this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.ClientSize = new System.Drawing.Size(192, 93);
+      this.Controls.Add(this.txtMessage);
+      this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+      this.MaximizeBox = false;
+      this.MinimizeBox = false;
+      this.Name = "ToastForm";
+      this.ShowInTaskbar = false;
+      this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+      this.Text = "RemindMe!";
+      this.ResumeLayout(false);
+      this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox txtMessage;
     }
 }

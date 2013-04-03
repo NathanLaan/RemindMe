@@ -21,10 +21,15 @@ namespace RemindMeApp
 
     private void notifyTimer_Tick(object sender, EventArgs e)
     {
-      string message = string.IsNullOrEmpty(this.txtNotificationMessage.Text) ? "RemindMe Notification!" : this.txtNotificationMessage.Text;
-      notifyIcon.ShowBalloonTip(10000, "RemindMe", message, ToolTipIcon.Info);
+        this.Notify();
+    }
 
-      this.ShowToast();
+    private void Notify()
+    {
+        string message = string.IsNullOrEmpty(this.txtNotificationMessage.Text) ? "RemindMe Notification!" : this.txtNotificationMessage.Text;
+        notifyIcon.ShowBalloonTip(10000, "RemindMe", message, ToolTipIcon.Info);
+
+        this.ShowToast();
     }
 
     private void ShowToast()
@@ -42,7 +47,7 @@ namespace RemindMeApp
       ToastForm toastForm = new ToastForm();
       toastForm.Left = w - toastForm.Width - spacer;
       toastForm.Top = h - toastForm.Height - spacer;
-
+      toastForm.Message = this.appOptions.NotificationMessage;
       toastForm.ShowDialog(this);
     }
 
@@ -97,6 +102,7 @@ namespace RemindMeApp
       //
       // TODO: Save settings on edit...
       //
+      this.appOptions.NotificationMessage = this.txtNotificationMessage.Text;
     }
 
     private void txtNotifyInterval_TextChanged(object sender, EventArgs e)
@@ -157,6 +163,11 @@ namespace RemindMeApp
     private void ShowBalloonTip()
     {
       this.notifyIcon.ShowBalloonTip(5000, "RemindMe", "RemindMe is still running. Double-click the icon to show or hide RemindMe. Right-click the icon for additional options.", ToolTipIcon.Info);
+    }
+
+    private void btnTestNotification_Click(object sender, EventArgs e)
+    {
+        this.ShowToast();
     }
 
 
