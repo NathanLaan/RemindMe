@@ -104,6 +104,12 @@
   <ItemGroup>
     <Content Include="AnimIcons\AppIcon00.ico" />
     <Content Include="AnimIcons\AppIcon01.ico" />
+    <Content Include="AnimIcons\AppIcon02.ico" />
+    <Content Include="AnimIcons\AppIcon03.ico" />
+    <Content Include="AnimIcons\AppIcon04.ico" />
+    <Content Include="AnimIcons\AppIcon05.ico" />
+    <Content Include="AnimIcons\AppIcon06.ico" />
+    <Content Include="AnimIcons\AppIcon07.ico" />
     <Content Include="AppIcon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

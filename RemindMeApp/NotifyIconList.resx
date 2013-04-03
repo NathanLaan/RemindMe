@@ -124,4 +124,22 @@
   <data name="AppIcon01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>AnimIcons\AppIcon01.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AppIcon02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>AnimIcons\AppIcon02.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppIcon03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>AnimIcons\AppIcon03.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppIcon04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>AnimIcons\AppIcon04.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppIcon05" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>AnimIcons\AppIcon05.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppIcon06" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>AnimIcons\AppIcon06.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AppIcon07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>AnimIcons\AppIcon07.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

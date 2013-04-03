@@ -105,9 +105,9 @@
       // 
       this.txtNotifyInterval.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.txtNotifyInterval.Location = new System.Drawing.Point(109, 12);
+      this.txtNotifyInterval.Location = new System.Drawing.Point(114, 12);
       this.txtNotifyInterval.Name = "txtNotifyInterval";
-      this.txtNotifyInterval.Size = new System.Drawing.Size(196, 20);
+      this.txtNotifyInterval.Size = new System.Drawing.Size(192, 20);
       this.txtNotifyInterval.TabIndex = 0;
       this.txtNotifyInterval.Text = "15";
       this.txtNotifyInterval.TextChanged += new System.EventHandler(this.txtNotifyInterval_TextChanged);
@@ -161,10 +161,10 @@
       this.txtNotificationMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.txtNotificationMessage.Location = new System.Drawing.Point(109, 39);
+      this.txtNotificationMessage.Location = new System.Drawing.Point(114, 39);
       this.txtNotificationMessage.Multiline = true;
       this.txtNotificationMessage.Name = "txtNotificationMessage";
-      this.txtNotificationMessage.Size = new System.Drawing.Size(296, 101);
+      this.txtNotificationMessage.Size = new System.Drawing.Size(291, 101);
       this.txtNotificationMessage.TabIndex = 4;
       this.txtNotificationMessage.Text = "RemindMe Notification!";
       this.txtNotificationMessage.TextChanged += new System.EventHandler(this.txtNotificationMessage_TextChanged);
@@ -172,7 +172,7 @@
       // btnTestNotification
       // 
       this.btnTestNotification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-      this.btnTestNotification.Location = new System.Drawing.Point(109, 146);
+      this.btnTestNotification.Location = new System.Drawing.Point(114, 146);
       this.btnTestNotification.Name = "btnTestNotification";
       this.btnTestNotification.Size = new System.Drawing.Size(93, 23);
       this.btnTestNotification.TabIndex = 6;
@@ -190,7 +190,7 @@
       // button1
       // 
       this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-      this.button1.Location = new System.Drawing.Point(212, 146);
+      this.button1.Location = new System.Drawing.Point(213, 146);
       this.button1.Name = "button1";
       this.button1.Size = new System.Drawing.Size(93, 23);
       this.button1.TabIndex = 7;
@@ -199,7 +199,7 @@
       // 
       // tmrAnimIcon
       // 
-      this.tmrAnimIcon.Interval = 200;
+      this.tmrAnimIcon.Interval = 2000;
       this.tmrAnimIcon.Tick += new System.EventHandler(this.tmrAnimIcon_Tick);
       // 
       // AppForm

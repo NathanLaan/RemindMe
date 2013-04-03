@@ -58,6 +58,8 @@ namespace RemindMeApp
       // load settings
       this.appOptions = new AppOptions();
       this.LoadSettings();
+      this.tmrAnimIcon.Enabled = true;
+      this.tmrAnimIcon.Start();
     }
 
     private void LoadSettings()
@@ -140,7 +142,6 @@ namespace RemindMeApp
     {
       this._applicationExit = true;
       Application.Exit();
-      this.tmrAnimIcon.Enabled = true;
     }
 
     private void notifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -188,8 +189,26 @@ namespace RemindMeApp
           case 2:
             this.notifyIcon.Icon = NotifyIconList.AppIcon01;
             break;
+          case 3:
+            this.notifyIcon.Icon = NotifyIconList.AppIcon02;
+            break;
+          case 4:
+            this.notifyIcon.Icon = NotifyIconList.AppIcon03;
+            break;
+          case 5:
+            this.notifyIcon.Icon = NotifyIconList.AppIcon04;
+            break;
+          case 6:
+            this.notifyIcon.Icon = NotifyIconList.AppIcon05;
+            break;
+          case 7:
+            this.notifyIcon.Icon = NotifyIconList.AppIcon06;
+            break;
+          case 8:
+            this.notifyIcon.Icon = NotifyIconList.AppIcon07;
+            break;
         }
-        if (_frameCounter < 4)
+        if (_frameCounter < 8)
         {
           _frameCounter++;
         }
@@ -205,7 +224,6 @@ namespace RemindMeApp
         this.notifyIcon.Icon = NotifyIconList.AppIcon00;
       }
       #endregion ANIMATION
-
     }
 
 
