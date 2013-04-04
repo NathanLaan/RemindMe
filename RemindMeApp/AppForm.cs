@@ -26,8 +26,8 @@ namespace RemindMeApp
 
     private void Notify()
     {
-        string message = string.IsNullOrEmpty(this.txtNotificationMessage.Text) ? "RemindMe Notification!" : this.txtNotificationMessage.Text;
-        notifyIcon.ShowBalloonTip(10000, "RemindMe", message, ToolTipIcon.Info);
+        //string message = string.IsNullOrEmpty(this.txtNotificationMessage.Text) ? "RemindMe Notification!" : this.txtNotificationMessage.Text;
+        //notifyIcon.ShowBalloonTip(10000, "RemindMe", message, ToolTipIcon.Info);
 
         this.ShowToast();
     }
