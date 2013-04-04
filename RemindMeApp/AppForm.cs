@@ -226,6 +226,11 @@ namespace RemindMeApp
       #endregion ANIMATION
     }
 
+    private void btnStop_Click(object sender, EventArgs e)
+    {
+      this.notifyTimer.Stop();
+    }
+
 
   }
 

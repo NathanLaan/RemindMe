@@ -45,7 +45,7 @@
       this.txtNotificationMessage = new System.Windows.Forms.TextBox();
       this.btnTestNotification = new System.Windows.Forms.Button();
       this.notifyIconImageList = new System.Windows.Forms.ImageList(this.components);
-      this.button1 = new System.Windows.Forms.Button();
+      this.btnStop = new System.Windows.Forms.Button();
       this.tmrAnimIcon = new System.Windows.Forms.Timer(this.components);
       this.mnuTray.SuspendLayout();
       this.SuspendLayout();
@@ -187,15 +187,17 @@
       this.notifyIconImageList.Images.SetKeyName(0, "AppIcon00.ico");
       this.notifyIconImageList.Images.SetKeyName(1, "AppIcon01.ico");
       // 
-      // button1
+      // btnStop
       // 
-      this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-      this.button1.Location = new System.Drawing.Point(213, 146);
-      this.button1.Name = "button1";
-      this.button1.Size = new System.Drawing.Size(93, 23);
-      this.button1.TabIndex = 7;
-      this.button1.Text = "Start";
-      this.button1.UseVisualStyleBackColor = true;
+      this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+      this.btnStop.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+      this.btnStop.Location = new System.Drawing.Point(213, 146);
+      this.btnStop.Name = "btnStop";
+      this.btnStop.Size = new System.Drawing.Size(93, 23);
+      this.btnStop.TabIndex = 7;
+      this.btnStop.Text = "Stop";
+      this.btnStop.UseVisualStyleBackColor = true;
+      this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
       // 
       // tmrAnimIcon
       // 
@@ -204,10 +206,12 @@
       // 
       // AppForm
       // 
+      this.AcceptButton = this.btnStart;
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+      this.CancelButton = this.btnStop;
       this.ClientSize = new System.Drawing.Size(417, 193);
-      this.Controls.Add(this.button1);
+      this.Controls.Add(this.btnStop);
       this.Controls.Add(this.btnTestNotification);
       this.Controls.Add(this.lblNotificationMessage);
       this.Controls.Add(this.txtNotificationMessage);
@@ -247,7 +251,7 @@
     private System.Windows.Forms.ToolStripMenuItem mnuTrayExit;
     private System.Windows.Forms.Button btnTestNotification;
     private System.Windows.Forms.ImageList notifyIconImageList;
-    private System.Windows.Forms.Button button1;
+    private System.Windows.Forms.Button btnStop;
     private System.Windows.Forms.Timer tmrAnimIcon;
   }
 }
