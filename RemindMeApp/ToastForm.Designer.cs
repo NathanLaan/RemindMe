@@ -40,7 +40,7 @@
       this.txtMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.txtMessage.BackColor = System.Drawing.SystemColors.ControlLight;
+      this.txtMessage.BackColor = System.Drawing.SystemColors.ControlLightLight;
       this.txtMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
       this.txtMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtMessage.Location = new System.Drawing.Point(13, 13);
@@ -59,7 +59,7 @@
       // 
       this.txtTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.txtTime.BackColor = System.Drawing.SystemColors.ControlLight;
+      this.txtTime.BackColor = System.Drawing.SystemColors.ControlLightLight;
       this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
       this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
       this.txtTime.Location = new System.Drawing.Point(12, 93);
