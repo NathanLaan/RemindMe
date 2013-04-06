@@ -22,6 +22,14 @@ namespace RemindMeApp
         }
       }
 
+      public string Time
+      {
+        set
+        {
+          this.txtTime.Text = value;
+        }
+      }
+
         public ToastForm()
         {
             InitializeComponent();

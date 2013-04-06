@@ -48,8 +48,9 @@ namespace RemindMeApp
       toastForm.Left = w - toastForm.Width - spacer;
       toastForm.Top = h - toastForm.Height - spacer;
       toastForm.Message = this.appOptions.NotificationMessage;
+      toastForm.Time = DateTime.Now.ToString("HH:mm");
       toastForm.TopMost = true;
-      toastForm.ShowDialog(this);
+      toastForm.Show();
     }
 
     private void AppForm_Load(object sender, EventArgs e)
