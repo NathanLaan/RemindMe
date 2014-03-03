@@ -32,8 +32,15 @@ namespace RemindMeApp
         this.ShowToast();
     }
 
+    private ToastForm toastForm;
+
     private void ShowToast()
     {
+
+        //
+        // TODO: Check if existing toastForm is open. If so, close, and reopen.
+        //
+
       //
       // Size of desktop exluding the taskbar:
       //
