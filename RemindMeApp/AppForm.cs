@@ -51,13 +51,13 @@ namespace RemindMeApp
       //
       // TODO: Check if existing toastForm is open. If so, close, and reopen.
       //
-      if (toastForm == null)
+      if (toastForm == null || toastForm.Disposing || toastForm.IsDisposed )
       {
           toastForm = new ToastForm();
       }
       else
       {
-          toastForm.Close();
+          toastForm.Hide();
       }
       toastForm.Left = w - toastForm.Width - spacer;
       toastForm.Top = h - toastForm.Height - spacer;
@@ -90,8 +90,6 @@ namespace RemindMeApp
       }
       this.txtNotificationMessage.Text = notificationMessage;
       #endregion
-
-
 
     }
 
@@ -155,6 +153,7 @@ namespace RemindMeApp
 
     private void ApplicationExit()
     {
+        this.notifyTimer.Stop();
       this._applicationExit = true;
       Application.Exit();
     }
@@ -244,6 +243,21 @@ namespace RemindMeApp
     private void btnStop_Click(object sender, EventArgs e)
     {
       this.notifyTimer.Stop();
+    }
+
+    private void mnuFileExit_Click(object sender, EventArgs e)
+    {
+        this.ApplicationExit();
+    }
+
+    private void btnExit_Click(object sender, EventArgs e)
+    {
+        this.ApplicationExit();
+    }
+
+    private void mnuHelpAbout_Click(object sender, EventArgs e)
+    {
+        MessageBox.Show(Application.ProductName + " version " + Application.ProductVersion);
     }
 
 
