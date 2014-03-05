@@ -10,25 +10,25 @@ namespace RemindMeApp
     public partial class ToastForm : Form
     {
 
-      public string Message
-      {
-        get
+        public string Message
         {
-          return this.txtMessage.Text;
+            get
+            {
+                return this.txtMessage.Text;
+            }
+            set
+            {
+                this.txtMessage.Text = value;
+            }
         }
-        set
-        {
-          this.txtMessage.Text = value;
-        }
-      }
 
-      public string Time
-      {
-        set
+        public string Time
         {
-          this.txtTime.Text = value;
+            set
+            {
+                this.txtTime.Text = value;
+            }
         }
-      }
 
         public ToastForm()
         {
@@ -42,30 +42,30 @@ namespace RemindMeApp
 
         private void tmrAnimation_Tick(object sender, EventArgs e)
         {
-          if (up)
-          {
-            if (this.Opacity >= 0.95)
+            if (up)
             {
-              this.up = false;
-              this.Opacity -= amount;
+                if (this.Opacity >= 0.95)
+                {
+                    this.up = false;
+                    this.Opacity -= amount;
+                }
+                else
+                {
+                    this.Opacity += amount;
+                }
             }
             else
             {
-              this.Opacity += amount;
+                if (this.Opacity <= 0.6)
+                {
+                    this.up = true;
+                    this.Opacity += amount;
+                }
+                else
+                {
+                    this.Opacity -= amount;
+                }
             }
-          }
-          else
-          {
-            if (this.Opacity <= 0.6)
-            {
-              this.up = true;
-              this.Opacity += amount;
-            }
-            else
-            {
-              this.Opacity -= amount;
-            }
-          }
         }
 
         private void btnOK_Click(object sender, EventArgs e)
