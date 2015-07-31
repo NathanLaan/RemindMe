@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemindMeApp", "RemindMeApp\RemindMeApp.csproj", "{02690A25-45C6-4B0D-893C-C2D447EAA423}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemindMe.WindowsApp", "RemindMe.WindowsApp\RemindMe.WindowsApp.csproj", "{02690A25-45C6-4B0D-893C-C2D447EAA423}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace RemindMeApp
+namespace RemindMe.WindowsApp
 {
 
     static class App

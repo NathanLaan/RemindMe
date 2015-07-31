@@ -1,4 +1,4 @@
-﻿namespace RemindMeApp
+﻿namespace RemindMe.WindowsApp
 {
     partial class ToastForm
     {

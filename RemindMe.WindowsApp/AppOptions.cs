@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace RemindMeApp
+namespace RemindMe.WindowsApp
 {
 
     class AppOptions

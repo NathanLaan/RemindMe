@@ -7,8 +7,8 @@
     <ProjectGuid>{02690A25-45C6-4B0D-893C-C2D447EAA423}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RemindMeApp</RootNamespace>
-    <AssemblyName>RemindMe</AssemblyName>
+    <RootNamespace>RemindMe.WindowsApp</RootNamespace>
+    <AssemblyName>RemindMe.WindowsApp</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -38,9 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
